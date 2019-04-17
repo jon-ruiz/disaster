@@ -22,12 +22,12 @@ The home page will include a list of live severe weather alerts and recent FEMA 
 2. Webscraper from at least 3 sources
 3. Open source code for disaster-specific webpage
 4. Short written description of project.
-5. Classification models for classifying type of disaster and whether disaster is live or recent (archive)
+5. Classification models for classifying type of disaster and whether disaster is live or recent
 
 ### Data Sources
 ---
 1. Federal Emergency Management Agency (FEMA) API
-2. National Weather Service RSS Feed
+2. National Weather Service (NWS) API
 3. News API
 4. Twitter API
-5. Twitterscraper
+5. GetOldTweets3  https://pypi.org/project/GetOldTweets3/
