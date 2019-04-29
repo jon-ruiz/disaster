@@ -41,7 +41,7 @@ The source's description of the categories is as follows:
 | **Information source** | *Tweets which conveyed/reported some information sources like photo, footage, video, or mentions other sources like TV, radio related to an incident* |
 | **Donations of money, goods, or services** | *Tweets which spoke about money raised, donation offers, goods/services offered or asked by the victims of an incident.* |
 
-[Testing data preparation notebook]('./notebook/Training Data.ipynb')
+[Testing data preparation notebook]('./notebook/Training_Data.ipynb')
 
 #### Model Results
 Cleaning of the tweets included setting all alphabetical characters to lowercase, tweet string removal (ie: "RT"), duplicate removal, and use of *TweetTokenizer*, which truncates elongations and removed Twitter handles. The tweet text was then vectorized either by simple frequency (using CountVectorizer) or by term-frequency-inverse document frequency (using TfidfVectorizer). Several classification models were tested to find the most effective model. After model tuning, the logistic regression models had the highest accuracy. The tweets from the Sandy/Joplin dataset were more effective in training our model than if we used both the Sandy/Joplin dataset and the Irma/Harvey/Maria dataset. Subsequently, our final training model only used the Sandy/Joplin tweets.
@@ -50,7 +50,8 @@ Cleaning of the tweets included setting all alphabetical characters to lowercase
 Natural language processing included usage of TF-IDF and Countvectorizer, each separately with the Naive Bayes algorithm. Algorithms used were Logistic Regression, Support Vector Machine, Naive Bayes with TF-IDF, Naive Bayes with CountVectorizer, and Random Forest. Logistic regression yieleded the most successful model. 
 
 #### Three Hurricanes Model 
-[Model estimation using training data from Hurricanes Harvey, Irma, and Maria]('./notebooks/Models-Three Hurricanes.ipynb')
+[Model estimation using training data from Hurricanes Harvey, Irma, and Maria]('./notebooks/Models-Three_Hurricanes.ipynb')
+
 Model | Train | Test |
 | --- | --- | --- |
 | **Logistic Regression** | 0.96 | 0.71 |
@@ -67,10 +68,10 @@ The logistic regression model had the highest accuracy. The table below shows th
 | **Rescue, volunteering, donation** | 0.80|
 | **Infrastucture and unitily damage** | .38	|
 | **Not relevant or can't judge** | .11 |
-| **Affected individuals** | .06|
-| **Injured or dead people ** | .56 |
-| **Vehicle damage ** | .56 |
-| **Missing or found people ** | .0 |
+| **Affected individuals** | .06 |
+| **Injured or dead people** | .56 |
+| **Vehicle damage** | .56 |
+| **Missing or found people** | .0 |
 
 
 
@@ -101,6 +102,7 @@ The logistic regression model had the highest accuracy. The table below shows th
 
 #### Application of Model to Hurricane Michael Tweets
 We tested the model on out-of-event data: tweets related to Hurricane Michael, the most recent hurricane that has been designated by FEMA. Tweets relating to Hurricane Michael were retrieved through the Python library "GetOldTweets3." These tweets were not labeled and were collected from a data range of October 9 through October 16, 2018 with a sole search term of "Hurricane Michael." Approximately 300,000 tweets were collected in total.
+
 [Notebookfor Collection of Hurricane Michael Tweets](./data/Hurricane_Michael_Tweets.ipynb)
 
 ### Wordclouds
