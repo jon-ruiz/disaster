@@ -47,35 +47,81 @@ The source's description of the categories is as follows:
 Cleaning of the tweets included setting all alphabetical characters to lowercase, tweet string removal (ie: "RT"), duplicate removal, and use of *TweetTokenizer*, which truncates elongations and removed Twitter handles. The tweet text was then vectorized either by simple frequency (using CountVectorizer) or by term-frequency-inverse document frequency (using TfidfVectorizer). Several classification models were tested to find the most effective model. After model tuning, the logistic regression models had the highest accuracy. The tweets from the Sandy/Joplin dataset were more effective in training our model than if we used both the Sandy/Joplin dataset and the Irma/Harvey/Maria dataset. Subsequently, our final training model only used the Sandy/Joplin tweets.
 
 
-Natural language processing included usage of TF-IDF and Countvectorizer, each separately with the Naive Bayes algorithm.
+Natural language processing included usage of TF-IDF and Countvectorizer, each separately with the Naive Bayes algorithm. Algorithms used were Logistic Regression, Support Vector Machine, Naive Bayes with TF-IDF, Naive Bayes with CountVectorizer, and Random Forest. Logistic regression yieleded the most successful model. 
 
-Algorithms used were Logistic Regression, Support Vector Machine, Naive Bayes with TF-IDF, Naive Bayes with CountVectorizer, and Random Forest. Logistic regression yieleded the most successful model. 
-
+#### Three Hurricanes Model 
 [Model estimation using training data from Hurricanes Harvey, Irma, and Maria]('./notebooks/Models-Three Hurricanes.ipynb')
+Model | Train | Test |
+| --- | --- | --- |
+| **Logistic Regression** | 0.96 | 0.71 |
+| **Support Vector Machine** | 0.88 | 0.69 |
+| **Naive Bayes w/TF-IDF** | 0.70 | 0.66 |
+| **Naive Bayes w/CVEC** | 0.77 | 0.68 |
+| **Random Forest** | 0.59 | 0.57 |
 
+The logistic regression model had the highest accuracy. The table below shows the accuracy by category for the logistic regression. The important categories relating to casualties and damage and caution and advice show an accuracy greater than 0.5. Moreover, the model appears to be highly accurate in separating non-informative tweets. These figures are based on applying the model to a held-back 25% sample of the original data.
+
+| Tweet Class | Accuracy with Logistic Regression Model |
+| --- | --- |
+| **Other relevant information** | 0.87 |
+| **Rescue, volunteering, donation** | 0.80|
+| **Infrastucture and unitily damage** | .38	|
+| **Not relevant or can't judge** | .11 |
+| **Affected individuals** | .06|
+| **Injured or dead people ** | .56 |
+| **Vehicle damage ** | .56 |
+| **Missing or found people ** | .0 |
+
+
+
+#### Sandy-Joplin Model
 [Model estimation using training data from Hurricane Sandy and Joplin Tornado](./notebooks/Models-Sandy_Joplin.ipynb)
 
-The logistic regression model had the highest accuracy, as shown in the summary below.
+The classifier model results of different types are shown in the summary below.
 
 | Model | Train | Test |
 | --- | --- | --- |
-| **Logistic Regression** | 0.987 | 0.871 |
-| **Support Vector Machine** | 0.969 | 0.817 |
-| **Naive Bayes w/TF-IDF** | 0.822 | 0.624 |
-| **Naive Bayes w/CVEC** | 0.924 | 0.702 |
-| **Random Forest** | 0.502 (R<sup>2</sup>) | 0.427 (R<sup>2</sup>) |
+| **Logistic Regression** | 0.88 | 0.68 |
+| **Support Vector Machine** | 0.85 | 0.61 |
+| **Naive Bayes w/TF-IDF** | 0.69 | 0.63 |
+| **Naive Bayes w/CVEC** | 0.82 | 0.68 |
+| **Random Forest** | 0.51 | 0.50 |
+
+The logistic regression model had the highest accuracy. The table below shows the accuracy by category for the logistic regression. The important categories relating to casualties and damage and caution and advice show an accuracy greater than 0.5. Moreover, the model appears to be highly accurate in separating non-informative tweets. These figures are based on applying the model to a held-back 25% sample of the original data.
+
+| Tweet Class | Accuracy with Logistic Regression Model |
+| --- | --- |
+| **Not informative** | 0.91 |
+| **Casualties and damage** | 0.54|
+| **Caution and advice** | .68|
+| **Informative, other** | .13 |
+| **Information source** | .43|
+| **Donations of money, goods, or services** | .49 |
+| **People missing, found or seen** | .36 |
 
 #### Application of Model to Hurricane Michael Tweets
-We tested the model on out-of-event data: tweets related to Hurricane Michael,  the most recent hurricane that has been designated by FEMA. Tweets relating to Hurricane Michael were retrieved through the Python library "GetOldTweets3." These tweets were not labeled and were collected from a data range of October 9 through October 16, 2018 with a sole search term of "Hurricane Michael." Approximately 300,000 tweets were collected in total.
+We tested the model on out-of-event data: tweets related to Hurricane Michael, the most recent hurricane that has been designated by FEMA. Tweets relating to Hurricane Michael were retrieved through the Python library "GetOldTweets3." These tweets were not labeled and were collected from a data range of October 9 through October 16, 2018 with a sole search term of "Hurricane Michael." Approximately 300,000 tweets were collected in total.
 [Notebookfor Collection of Hurricane Michael Tweets](./data/Hurricane_Michael_Tweets.ipynb)
 
 ### Wordclouds
 
-Comparison of wordclouds for tweets labeled as containing "Caution and Advice." First, wordcloud using human-labeled tweets from Sandy and Joplin:
+Comparison of wordclouds for tweets labeled as containing information on casualties." First, wordcloud using human-labeled tweets from Sandy and Joplin:
+![wordcloud of caution and advice tweets from Hurricane Sandy](./notebooks/sandy_casualties.png)
+
+By comparison, here is a wordcloud of tweets from Hurricane Michael that were predicted to be related to casualties using the model described above:
+![wordcloud of caution and advice tweets from Hurricane Michael](./notebooks/michael_casualties.png)
+
+Here are wordclouds for tweets labeled as containing "Caution and Advice." First, wordcloud using human-labeled tweets from Sandy and Joplin:
 ![wordcloud of caution and advice tweets from Hurricane Sandy](./notebooks/sandy_advice.png)
 
 By comparison, here is a wordcloud of tweets from Hurricane Michael that were predicted to be "caution and advice" tweets using the model described above:
 ![wordcloud of caution and advice tweets from Hurricane Michael](./notebooks/michael_advice.png)
+
+Here are wordclouds for tweets labeled as requests for donations. First, wordcloud using human-labeled tweets from Sandy and Joplin:
+![wordcloud of caution and advice tweets from Hurricane Sandy](./notebooks/sandy_donations.png)
+
+By comparison, here are the predicted donations-related tweet word frequencies for Hurricane Michael:
+![wordcloud of caution and advice tweets from Hurricane Michael](./notebooks/michael_donations.png)
 
 ### Dashboard
 ---
