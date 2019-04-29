@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style>
+body {
+  margin: 0px;
+  font-family: Helvetica;
+}
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #000000 url("http://www.hyde-housing.co.uk/media/1937/storm-clouds-banner-social.jpg");
+  color: white;
+  font-size: 15px;
+}
+.content {
+  padding: 0px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 0px;
+}
+</style>
+
+  <head>
+    <meta charset="utf-8">
+        <title>News feed</title>
+  </head>
+  <body>
+    <h1>Relevant Disaster News</h1>
+
+    <p>This project is the foundations for a web application to obtain disaster-related news. After selecting a specific disaster, the webpage displays the most relevant news pertaining to that topic published in the past twelve months.</p>
+
+
+    <form action="{{ url_for('json_route')}}" method="post">
+      <input type="text" name="Search Disaster">
+      <input type="submit" value="submit">
+    </form>
+
+
+  </body>
+</html>

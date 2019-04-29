@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Dashboard</title>
+<style>
+body {
+  margin: 0px;
+  font-family: Helvetica;
+}
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #000000 url("http://www.hyde-housing.co.uk/media/1937/storm-clouds-banner-social.jpg");
+  color: white;
+  font-size: 15px;
+}
+.content {
+  padding: 0px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 0px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left:10%;
+  margin-right:10%;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 0px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #A1BED1;
+}
+
+</style>
+</head>
+
+<div class="header" id="myHeader">
+  <h1 style="text-align:center; font-family:helvetica"> Disaster Twitter Dashboard </h1>
+</div>
+<div class="content">
+  <body bgcolor="E6ECF0">
+  <br>
+    <table>
+      <tr>
+        <th> Casualties and Damage</th>
+      </tr>
+      <tr>
+        <td><a href="{{ casualties.permalink[0] }}" target="_blank">{{ casualties.text[0] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ casualties.permalink[1] }}" target="_blank">{{ casualties.text[1] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ casualties.permalink[2] }}" target="_blank">{{ casualties.text[2] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ casualties.permalink[3] }}" target="_blank">{{ casualties.text[3] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ casualties.permalink[4] }}" target="_blank">{{ casualties.text[4] }}</a></p></td>
+      </tr>
+    </table>
+  </br>
+  <br>
+    <table>
+      <tr>
+        <th> Caution and Advice</th>
+      </tr>
+      <tr>
+        <td><a href="{{ caution_advice.permalink[0] }}" target="_blank">{{ caution_advice.text[0] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ caution_advice.permalink[1] }}" target="_blank">{{ caution_advice.text[1] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ caution_advice.permalink[2] }}" target="_blank">{{ caution_advice.text[2] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ caution_advice.permalink[3] }}" target="_blank">{{ caution_advice.text[3] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ caution_advice.permalink[4] }}" target="_blank">{{ caution_advice.text[4] }}</a></p></td>
+      </tr>
+    </table>
+  </br>
+  <br>
+    <table>
+      <tr>
+        <th>Donations of money, goods or services</th>
+      </tr>
+      <tr>
+        <td><a href="{{ donations.permalink[0] }}" target="_blank">{{ donations.text[0] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ donations.permalink[1] }}" target="_blank">{{ donations.text[1] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ donations.permalink[2] }}" target="_blank">{{ donations.text[2] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ donations.permalink[3] }}" target="_blank">{{ donations.text[3] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ donations.permalink[4] }}" target="_blank">{{ donations.text[4] }}</a></p></td>
+      </tr>
+    </table>
+  </br>
+  <br>
+    <table>
+      <tr>
+        <th>Information Source</th>
+      </tr>
+      <tr>
+        <td><a href="{{ info_source.permalink[0] }}" target="_blank">{{ info_source.text[0] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ info_source.permalink[1] }}" target="_blank">{{ info_source.text[1] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ info_source.permalink[2] }}" target="_blank">{{ info_source.text[2] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ info_source.permalink[3] }}" target="_blank">{{ info_source.text[3] }}</a></p></td>
+      </tr>
+      <tr>
+        <td><a href="{{ info_source.permalink[4] }}" target="_blank">{{ info_source.text[4] }}</a></p></td>
+      </tr>
+    </table>
+  </br>
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+  </body>
+</div>
+
+</html>
