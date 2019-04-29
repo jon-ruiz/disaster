@@ -127,8 +127,7 @@ By comparison, here are the predicted donations-related tweet word frequencies f
 
 ### Dashboard
 ---
-The dashboard was built with Flask, a micro web development platform for Python.
-**[ADD INFO HERE]**
+The dashboard was built with Flask, a micro web development platform for Python. The dashboard presents the top tweets from each of the categories (Casualties and Damage, Caution and Advice, Donations of money, goods, or services, and Information Source). Each tweet links out to the original post on the Twitter.com website.
 
 ### Conclusions
 ---
