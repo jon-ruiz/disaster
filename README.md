@@ -25,11 +25,12 @@ We decided to create a model that could help identify tweets that provide useful
 #### Testing Data
 Numerous previous studies have catalogued disaster-related tweets and have used natural language processing techniques to identify relevant tweets include such methods as keyword and hashtag searches and geolocation. We found two sources of human-labeled tweets from previous studies:
 
--- a. The first source consists of 9,465 tweets from "CrisisMMD: Multimodal Twitter Datasets from Natural Disasters<sup>1</sup>. Although other events were included in the source, we decided only to use tweets related to Hurricanes that affected the U.S. These included three events: Hurricane Irma (tweets dated circa Sept. 2017), Hurricane Harvey (tweets dated circa Aug. to Sept. 2017), and Hurricane Maria (tweets dated circa Sept. to Nov. 2017). Although this source provided a large number of human-labeled tweets, the authors of the original study selected only tweets that contained at least one image. These tweets were labeled as informative or not-informative based on whether a given tweet provided information for humanitarian aid purposes. The informative tweets were further classified as Infrastructure and utility damage, Individuals affected,
-Injured or dead people, Vehicle damage, Missing or found people, or other.
+  a. The first source consists of 9,465 tweets from "CrisisMMD: Multimodal Twitter Datasets from Natural Disasters<sup>1</sup>. Although other events were included in the source, we decided only to use tweets related to Hurricanes that affected the U.S. These included three events: Hurricane Irma (tweets dated circa Sept. 2017), Hurricane Harvey (tweets dated circa Aug. to Sept. 2017), and Hurricane Maria (tweets dated circa Sept. to Nov. 2017). Although this source provided a large number of human-labeled tweets, the authors of the original study selected only tweets that contained at least one image. These tweets were labeled as informative or not-informative based on whether a given tweet provided information for humanitarian aid purposes. The informative tweets were further classified as Infrastructure and utility damage, Individuals affected,
+  Injured or dead people, Vehicle damage, Missing or found people, or other.
 
--- b. An additional 3,121 tweets were taken from "Practical Extraction of Disaster-Relevant Information from Social Media"<sup>2</sup>, which included tweets related to the Joplin Tornado (tweets dated circa May 2011) and Hurrican Sandy (tweets dated circa Oct. 2012). These tweets were labeled as either Personal (if a message was only of interest to its author and her immediate circle of family/friends and does not convey anything useful), Informative (if the message was of interest to other people beyond the author’s immediate circle), or Other (if the message was not related to the disaster). The informative tweets were further classified as Casualties and damage, Caution and advice, Information Source, Donations of money, goods or services, People missing, found or seen, or unknown. (Note that this classification differs from the one used in the previous study.)
-The original study's description of the categories is as follows:
+  b. An additional 3,121 tweets were taken from "Practical Extraction of Disaster-Relevant Information from Social Media"<sup>2</sup>, which included tweets related to the Joplin Tornado (tweets dated circa May 2011) and Hurrican Sandy (tweets dated circa Oct. 2012). These tweets were labeled as either Personal (if a message was only of interest to its author and her immediate circle of family/friends and does not convey anything useful), Informative (if the message was of interest to other people beyond the author’s immediate circle), or Other (if the message was not related to the disaster). The informative tweets were further classified as Casualties and damage, Caution and advice, Information Source, Donations of money, goods or services, People missing, found or seen, or unknown. (Note that this classification differs from the one used in the previous study.)
+
+The source's description of the categories is as follows:
 
 | Tweet Class | Description |
 | --- | --- |
@@ -40,7 +41,7 @@ The original study's description of the categories is as follows:
 | **Information source** | *Tweets which conveyed/reported some information sources like photo, footage, video, or mentions other sources like TV, radio related to an incident* |
 | **Donations of money, goods, or services** | *Tweets which spoke about money raised, donation offers, goods/services offered or asked by the victims of an incident.* |
 
-[Testing data preparation notebook](../notebook/Training Data.ipynb)
+[Testing data preparation notebook]('./notebook/Training Data.ipynb')
 
 #### Model Results
 Cleaning of the tweets included setting all alphabetical characters to lowercase, tweet string removal (ie: "RT"), duplicate removal, and use of *TweetTokenizer*, which truncates elongations and removed Twitter handles. The tweet text was then vectorized either by simple frequency (using CountVectorizer) or by term-frequency-inverse document frequency (using TfidfVectorizer). Several classification models were tested to find the most effective model. After model tuning, the logistic regression models had the highest accuracy. The tweets from the Sandy/Joplin dataset were more effective in training our model than if we used both the Sandy/Joplin dataset and the Irma/Harvey/Maria dataset. Subsequently, our final training model only used the Sandy/Joplin tweets.
@@ -50,9 +51,9 @@ Natural language processing included usage of TF-IDF and Countvectorizer, each s
 
 Algorithms used were Logistic Regression, Support Vector Machine, Naive Bayes with TF-IDF, Naive Bayes with CountVectorizer, and Random Forest. Logistic regression yieleded the most successful model. 
 
-[Model estimation using training data from Hurricanes Harvey, Irma, and Maria](../notebooks/Models-Three Hurricanes.ipynb)
+[Model estimation using training data from Hurricanes Harvey, Irma, and Maria]('./notebooks/Models-Three Hurricanes.ipynb')
 
-[Model estimation using training data from Hurricane Sandy and Joplin Tornado](../notebooks/Models-Sandy_Joplin.ipynb)
+[Model estimation using training data from Hurricane Sandy and Joplin Tornado](./notebooks/Models-Sandy_Joplin.ipynb)
 
 The logistic regression model had the highest accuracy, as shown in the summary below.
 
@@ -66,15 +67,15 @@ The logistic regression model had the highest accuracy, as shown in the summary 
 
 #### Application of Model to Hurricane Michael Tweets
 We tested the model on out-of-event data: tweets related to Hurricane Michael,  the most recent hurricane that has been designated by FEMA. Tweets relating to Hurricane Michael were retrieved through the Python library "GetOldTweets3." These tweets were not labeled and were collected from a data range of October 9 through October 16, 2018 with a sole search term of "Hurricane Michael." Approximately 300,000 tweets were collected in total.
-[Notebookfor Collection of Hurricane Michael Tweets](../data/Hurricane_Michael_Tweets.ipynb)
+[Notebookfor Collection of Hurricane Michael Tweets](./data/Hurricane_Michael_Tweets.ipynb)
 
 ### Wordclouds
 
 Comparison of wordclouds for tweets labeled as containing "Caution and Advice." First, wordcloud using human-labeled tweets from Sandy and Joplin:
-![wordcloud of caution and advice tweets from Hurricane Sandy](../notebooks/sandy_advice.png)
+![wordcloud of caution and advice tweets from Hurricane Sandy](./notebooks/sandy_advice.png)
 
 By comparison, here is a wordcloud of tweets from Hurricane Michael that were predicted to be "caution and advice" tweets using the model described above:
-![wordcloud of caution and advice tweets from Hurricane Michael](../notebooks/michael_advice.png)
+![wordcloud of caution and advice tweets from Hurricane Michael](./notebooks/michael_advice.png)
 
 ### Dashboard
 ---
