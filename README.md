@@ -41,7 +41,7 @@ The source's description of the categories is as follows:
 | **Information source** | *Tweets which conveyed/reported some information sources like photo, footage, video, or mentions other sources like TV, radio related to an incident* |
 | **Donations of money, goods, or services** | *Tweets which spoke about money raised, donation offers, goods/services offered or asked by the victims of an incident.* |
 
-[Training data preparation notebook]('./notebook/Training_Data.ipynb')
+[Training data preparation notebook](./notebook/Training_Data.ipynb)
 
 #### Model Results
 Cleaning of the tweets included setting all alphabetical characters to lowercase, tweet string removal (ie: "RT"), duplicate removal, and use of *TweetTokenizer*, which truncates elongations and removed Twitter handles. The tweet text was then vectorized either by simple frequency (using CountVectorizer) or by term-frequency-inverse document frequency (using TfidfVectorizer). Several classification models were tested to find the most effective model. After model tuning, the logistic regression models had the highest accuracy. The tweets from the Sandy/Joplin dataset were more effective in training our model than if we used both the Sandy/Joplin dataset and the Irma/Harvey/Maria dataset. Subsequently, our final training model only used the Sandy/Joplin tweets.
@@ -50,7 +50,7 @@ Cleaning of the tweets included setting all alphabetical characters to lowercase
 Natural language processing included usage of TF-IDF and Countvectorizer, each separately with the Naive Bayes algorithm. Algorithms used were Logistic Regression, Support Vector Machine, Naive Bayes with TF-IDF, Naive Bayes with CountVectorizer, and Random Forest. Logistic regression yieleded the most successful model. 
 
 #### Three Hurricanes Model 
-[Model estimation using training data from Hurricanes Harvey, Irma, and Maria]('./notebooks/Models-Three_Hurricanes.ipynb')
+[Model estimation using training data from Hurricanes Harvey, Irma, and Maria](./notebooks/Models-Three_Hurricanes.ipynb)
 
 Model | Train | Test |
 | --- | --- | --- |
@@ -127,28 +127,13 @@ By comparison, here are the predicted donations-related tweet word frequencies f
 
 ### Dashboard
 ---
-The dashboard was built with Flask, a micro web development platform for Python. The dashboard presents the top tweets from each of the categories (Casualties and Damage, Caution and Advice, Donations of money, goods, or services, and Information Source). Each tweet links out to the original post on the Twitter.com website.
+The dashboard was built with Flask, a micro web development platform for Python. The dashboard presents the top tweets from each of the categories (Casualties and Damage, Caution and Advice, Donations of money, goods, or services, and Information Source). Each tweet links  to the original post on the Twitter.com website.
 
 ### Conclusions
 ---
+Twitter is an important source of real-time, micro-targeted information that has enormous potential for information discovery and dissemination during natural disasters. The challenge is determining which tweets have useful information among the information firehose that is Twitter. We found that we could leverage existing datasets of human-labeled disaster-related tweets to develop a model to identify those tweets that have generally relevant information. Although the overall accuracy of the model on withheld testing data was only moderate, it had more than 90% accuracy in separating informative and non-informative tweets using the Sandy-Joplin data. Further, when applied to out-of-event data (tweets related to Hurricane Michael), the model seems to do a reasonable job at finding informative tweets and in identifying certain specific types such as those refering to requests for donations or those retweeting news, photos, or videos from established media.
+We could improve the model by establishing more generalizable categories of emergency-related tweets and label more training data. It would also be useful to review a sample of at least a few hundred out-of-event cases to provide a better indication of the accuracy of the model on a real-time stream of tweets. One could also expand the model to include other natural disaster types, aside from hurricanes or tornados.
 
-Further improvement to our model can be achieved through obtaining more training data that include similar human-labeled data as existing training data included approximately 3,000 tweets. Increased accuracy and precision can only further reduce unneccessary noise so that immediate post-impact help can be provided.
-
-Future endeavors can attempt to advance the models so that other natural disaster types, aside from hurricanes, can be applied.
-
-
-### Project Deliverables
----
-
-| File | Description |
-| --- | --- |
-| **Project_Write-up.md** | *Project Technical Report* |
-| **Models-Sandy_Joplin.ipynb** | *Train model with Hurricane Sandy/Joplin Tornado Tweets* |
-| **Models-Three Hurricanes.ipynb** | *Train model with Hurricane Irma, Hurricane Harvey, and Hurricane Maria tweets* |
-| **Training Data.ipynb** | *Code for training data retrieval* |
-| **Hurricane_Michael_Tweets.ipynb** | *Code for test data retrieval* |
-| **code for website** | *Open source code for disaster online dashboard* |
-| **Project 4_ Twitter Dashboard for Disasters** | *Powerpoint presentation* |
 
 ### Data Sources
 ---
@@ -157,6 +142,3 @@ Qatar Computing Research Institute, HBKU, Doha, Qatar
 2. Practical Extraction of Disaster-Relevant Information from
 Social Media: Muhammad Imran (University of Trento), Shady Elbassuoni (American University of Beirut), Carlos Castillo (Qatar Computing Research Institute), Fernando Diaz (Microsoft Research), Patrick Meier (Qatar Computing Research Institute)
 3. GetOldTweets3  https://pypi.org/project/GetOldTweets3/
-
-Federal Emergency Management Agency (FEMA) API
-National Weather Service (NWS) API
