@@ -107,10 +107,10 @@ We tested the model on out-of-event data: tweets related to Hurricane Michael, t
 
 ### Wordclouds
 
-Comparison of wordclouds for tweets labeled as containing information on casualties." First, wordcloud using human-labeled tweets from Sandy and Joplin:
+The following wordclouds compare tweets labeled as containing information on casualties. First, wordcloud using human-labeled tweets from Sandy and Joplin:
 ![wordcloud of caution and advice tweets from Hurricane Sandy](./notebooks/sandy_casualties.png)
 
-By comparison, here is a wordcloud of tweets from Hurricane Michael that were predicted to be related to casualties using the model described above:
+Second, these are tweets from Hurricane Michael that were predicted to be related to casualties using the model described above:
 ![wordcloud of caution and advice tweets from Hurricane Michael](./notebooks/michael_casualties.png)
 
 Here are wordclouds for tweets labeled as containing "Caution and Advice." First, wordcloud using human-labeled tweets from Sandy and Joplin:
@@ -145,6 +145,6 @@ Social Media: Muhammad Imran (University of Trento), Shady Elbassuoni (American 
 
 ### Comments from Each Team Member
 ---
-1. Michelle's comments
+1. [Michelle's comments](https://git.generalassemb.ly/MichelleC/dsi-7-submissions/blob/master/Project_4_submission/Project_4_MCheung_Tech_Report.ipynb)
 2. [Jon's comments](https://docs.google.com/document/d/11U8SQtYu8Zo2rAhfRmzM5YQkyWft7M8eUlMe-YwnFUQ/edit?usp=sharing)
 3. [Paul's comments](https://docs.google.com/document/d/1q6JQHFgpiOrZN3m5-uBsH7dgp6P-Io09-cmZ0-S0mtE/edit?usp=sharing)
