@@ -142,3 +142,9 @@ Qatar Computing Research Institute, HBKU, Doha, Qatar
 2. Practical Extraction of Disaster-Relevant Information from
 Social Media: Muhammad Imran (University of Trento), Shady Elbassuoni (American University of Beirut), Carlos Castillo (Qatar Computing Research Institute), Fernando Diaz (Microsoft Research), Patrick Meier (Qatar Computing Research Institute)
 3. GetOldTweets3  https://pypi.org/project/GetOldTweets3/
+
+### Comments from Each Team Member
+---
+1. Michelle's comments
+2. [Jon's comments](https://docs.google.com/document/d/11U8SQtYu8Zo2rAhfRmzM5YQkyWft7M8eUlMe-YwnFUQ/edit?usp=sharing)
+3. [Paul's comments](https://docs.google.com/document/d/1q6JQHFgpiOrZN3m5-uBsH7dgp6P-Io09-cmZ0-S0mtE/edit?usp=sharing)
