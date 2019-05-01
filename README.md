@@ -4,11 +4,24 @@
 ---
 
 ### Team
- - Michelle Cheung
- - Jonathan Ruiz
- - Paul Schimek
+  -- Michelle Cheung
+  -- Jonathan Ruiz
+  -- Paul Schimek
  
- 
+ ### Links
+  -- [Public version of this repo](https://github.com/keencyclist/disaster) 
+  -- [Disaster Dashboard Demo, only renders in public verison](./templates/Dashboard.htm)
+  -- [Training data preparation notebook](./notebook/Training_Data.ipynb)
+  -- [Model estimation using training data from Hurricanes Harvey, Irma, and Maria](./notebooks/Models-Three_Hurricanes.ipynb)
+  -- [Model estimation using training data from Hurricane Sandy and Joplin Tornado](./notebooks/Models-Sandy_Joplin.ipynb)
+  -- [Notebook for Hurricane Michael Tweet data collection](./data/Hurricane_Michael_Tweets.ipynb)
+
+  ### Comments from Each Team Member
+---
+1. [Michelle's comments](https://git.generalassemb.ly/MichelleC/dsi-7-submissions/blob/master/Project_4_submission/Project_4_MCheung_Tech_Report.ipynb)
+2. [Jon's comments](https://docs.google.com/document/d/11U8SQtYu8Zo2rAhfRmzM5YQkyWft7M8eUlMe-YwnFUQ/edit?usp=sharing)
+3. [Paul's comments](https://docs.google.com/document/d/1q6JQHFgpiOrZN3m5-uBsH7dgp6P-Io09-cmZ0-S0mtE/edit?usp=sharing)
+
  ### Project Description
 ---
 During a major disaster, it is essential to provide the public and responders with relevant local news updates in order to gain situational awareness during the event. During a disaster, news updates are coming from tens to hundreds of different sources, all in different formats, available from different websites, news channels etc., and it is often difficult to find what would be most helpful amid the chaos of other non-disaster related news and media. There is currently no forum for rounding up and archiving relevant news for a live disaster event. This project consists of a method to identify tweets that might be relevant to an ongoing disaster, and creates a webpage that displays them in a dashboard.
@@ -142,9 +155,3 @@ Qatar Computing Research Institute, HBKU, Doha, Qatar
 2. Practical Extraction of Disaster-Relevant Information from
 Social Media: Muhammad Imran (University of Trento), Shady Elbassuoni (American University of Beirut), Carlos Castillo (Qatar Computing Research Institute), Fernando Diaz (Microsoft Research), Patrick Meier (Qatar Computing Research Institute)
 3. GetOldTweets3  https://pypi.org/project/GetOldTweets3/
-
-### Comments from Each Team Member
----
-1. [Michelle's comments](https://git.generalassemb.ly/MichelleC/dsi-7-submissions/blob/master/Project_4_submission/Project_4_MCheung_Tech_Report.ipynb)
-2. [Jon's comments](https://docs.google.com/document/d/11U8SQtYu8Zo2rAhfRmzM5YQkyWft7M8eUlMe-YwnFUQ/edit?usp=sharing)
-3. [Paul's comments](https://docs.google.com/document/d/1q6JQHFgpiOrZN3m5-uBsH7dgp6P-Io09-cmZ0-S0mtE/edit?usp=sharing)
