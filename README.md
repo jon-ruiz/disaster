@@ -4,17 +4,17 @@
 ---
 
 ### Team
-  -- Michelle Cheung
-  -- Jonathan Ruiz
-  -- Paul Schimek
+  - Michelle Cheung
+  - Jonathan Ruiz
+  - Paul Schimek
  
  ### Links
-  -- [Public version of this repo](https://github.com/keencyclist/disaster) 
-  -- [Disaster Dashboard Demo, only renders in public verison](./templates/Dashboard.htm)
-  -- [Training data preparation notebook](./notebook/Training_Data.ipynb)
-  -- [Model estimation using training data from Hurricanes Harvey, Irma, and Maria](./notebooks/Models-Three_Hurricanes.ipynb)
-  -- [Model estimation using training data from Hurricane Sandy and Joplin Tornado](./notebooks/Models-Sandy_Joplin.ipynb)
-  -- [Notebook for Hurricane Michael Tweet data collection](./data/Hurricane_Michael_Tweets.ipynb)
+  * [Public version of this repo](https://github.com/keencyclist/disaster) 
+  * [Disaster Dashboard Demo, only renders in public verison](./templates/Dashboard.htm)
+  * [Training data preparation notebook](./notebook/Training_Data.ipynb)
+  * [Model estimation using training data from Hurricanes Harvey, Irma, and Maria](./notebooks/Models-Three_Hurricanes.ipynb)
+  * [Model estimation using training data from Hurricane Sandy and Joplin Tornado](./notebooks/Models-Sandy_Joplin.ipynb)
+  * [Notebook for Hurricane Michael Tweet data collection](./data/Hurricane_Michael_Tweets.ipynb)
 
   ### Comments from Each Team Member
 ---
